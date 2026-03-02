@@ -247,14 +247,19 @@ nav.scrolled{height:58px;box-shadow:var(--sh-sm)}
 .btn-mag::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 55%);pointer-events:none}
 .btn-mag:hover{background:var(--mag-dark);box-shadow:var(--sh-mag-lg);transform:translateY(-2px)}
 .btn-outline{
-  background:transparent;color:var(--text-mid);
+  background:var(--surface);color:var(--text);
   padding:14px 22px;border-radius:var(--r-sm);
-  font-family:var(--font);font-weight:500;font-size:.86rem;
+  font-family:var(--font);font-weight:600;font-size:.86rem;
   text-decoration:none;display:inline-flex;align-items:center;gap:6px;
-  border:1.5px solid var(--border-mid);
+  border:1px solid var(--surface);
   transition:all .2s;
 }
-.btn-outline:hover{border-color:var(--mag);color:var(--mag);background:var(--mag-tint)}
+.btn-outline:hover{
+  background:#FFEDD5; /* Light orange (Orange-100) */
+  border-color:#FFEDD5;
+  color:var(--teal);
+  transform:translateY(-1px);
+}
 .btn-xl{padding:16px 34px !important;font-size:.95rem !important}
 
 .hero-stats{
