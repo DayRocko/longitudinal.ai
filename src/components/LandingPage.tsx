@@ -228,7 +228,13 @@ const PROCESS_STEPS = [
     title: 'Diagnóstico Profundo',
     desc: 'Mapeo completo de tus procesos, identificación de cuellos de botella y cálculo del costo real de la ineficiencia. Sesión gratuita de 90 min.',
     icon: Search,
-    image: 'https://picsum.photos/seed/diagnosis/1200/600'
+    image: 'https://picsum.photos/seed/diagnosis/1200/600',
+    steps: [
+      'Mapeo completo de tus procesos actuales',
+      'Identificación de cuellos de botella',
+      'Cálculo del costo real de la ineficiencia',
+      'Sesión gratuita de 90 min de entrega de resultados'
+    ]
   },
   {
     id: 'design',
@@ -236,7 +242,13 @@ const PROCESS_STEPS = [
     title: 'Diseño de Solución',
     desc: 'Propuesta detallada con mapa de automatización, herramientas recomendadas, cronograma y ROI proyectado. Todo documentado.',
     icon: PenTool,
-    image: 'https://picsum.photos/seed/design/1200/600'
+    image: 'https://picsum.photos/seed/design/1200/600',
+    steps: [
+      'Creación del mapa de arquitectura de automatización',
+      'Selección de herramientas No-Code/Low-Code óptimas',
+      'Definición del cronograma detallado de implementación',
+      'Proyección de ROI y documentación técnica'
+    ]
   },
   {
     id: 'implementation',
@@ -244,7 +256,13 @@ const PROCESS_STEPS = [
     title: 'Implementación Ágil',
     desc: 'Construcción por sprints de 2 semanas. Resultados visibles en las primeras 4 semanas del proyecto.',
     icon: Rocket,
-    image: 'https://picsum.photos/seed/implementation/1200/600'
+    image: 'https://picsum.photos/seed/implementation/1200/600',
+    steps: [
+      'Configuración de entornos y cuentas',
+      'Desarrollo por sprints de 2 semanas',
+      'Pruebas de integración y calidad (QA)',
+      'Despliegue y entrega de resultados visibles'
+    ]
   },
   {
     id: 'improvement',
@@ -252,7 +270,13 @@ const PROCESS_STEPS = [
     title: 'Seguimiento y Mejora',
     desc: 'KPIs mensuales, optimización continua, capacitación de tu equipo y soporte post-implementación incluido.',
     icon: TrendingUp,
-    image: 'https://picsum.photos/seed/improvement/1200/600'
+    image: 'https://picsum.photos/seed/improvement/1200/600',
+    steps: [
+      'Monitoreo de KPIs y métricas de éxito',
+      'Optimización continua de flujos de trabajo',
+      'Capacitación especializada a tu equipo',
+      'Soporte post-implementación y mantenimiento'
+    ]
   }
 ];
 
@@ -313,6 +337,7 @@ export default function LandingPage() {
   const activeRoute = routes.find(r => r.id === activeRouteId);
   const [activeService, setActiveService] = useState(SERVICE_MODULES[0]);
   const [activeProcess, setActiveProcess] = useState(PROCESS_STEPS[0]);
+  const [activeProcessDetail, setActiveProcessDetail] = useState<typeof PROCESS_STEPS[0] | null>(null);
   
   // State to toggle between V1 (Old) and V2 (New) designs for comparison
   // const [isV2, setIsV2] = useState(true); // Removed as V2 is now permanent
@@ -766,6 +791,51 @@ export default function LandingPage() {
         </div>
       )}
 
+      {/* ════ PROCESS DETAIL OVERLAY ════ */}
+      {activeProcessDetail && (
+        <div className="detail-overlay">
+          <div className="do-header">
+            <div className="logo"><span className="logo-mark">L</span>Longitudinal</div>
+            <button className="do-close" onClick={() => setActiveProcessDetail(null)}>✕</button>
+          </div>
+          <div className="do-content">
+            <img src={activeProcessDetail.image} alt={activeProcessDetail.title} className="do-hero-img" referrerPolicy="no-referrer" />
+            <div className="eyebrow">{activeProcessDetail.label}</div>
+            <h1 className="do-title">{activeProcessDetail.title}</h1>
+            <p className="do-desc" style={{fontSize: '1.25rem', lineHeight: '1.6', marginBottom: '2rem', color: 'var(--text-mid)'}}>{activeProcessDetail.desc}</p>
+            
+            <div className="mt-8">
+              <h3 style={{fontSize: '1.5rem', fontWeight: '600', marginBottom: '1.5rem', color: 'var(--text)'}}>Pasos para realizar este proceso:</h3>
+              <ul style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+                {activeProcessDetail.steps?.map((step, i) => (
+                  <li key={i} style={{display: 'flex', alignItems: 'flex-start', gap: '1rem'}}>
+                    <div style={{
+                      background: 'var(--mag)', 
+                      color: 'white', 
+                      borderRadius: '50%', 
+                      width: '2rem', 
+                      height: '2rem', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      flexShrink: 0, 
+                      fontWeight: 'bold'
+                    }}>
+                      {i + 1}
+                    </div>
+                    <span style={{fontSize: '1.1rem', color: 'var(--text-mid)'}}>{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div style={{marginTop: '48px'}}>
+              <a href="#cta" onClick={() => setActiveProcessDetail(null)} className="btn-mag btn-xl">Agendar {activeProcessDetail.title}</a>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ════ SERVICES ════ */}
       <section id="services">
         <div className="services-head">
@@ -921,7 +991,10 @@ export default function LandingPage() {
                 </div>
                 <h3 className="pc-title">{activeProcess.title}</h3>
                 <p className="pc-desc">{activeProcess.desc}</p>
-                <button className="btn-lime mt-6 flex items-center gap-2">
+                <button 
+                  className="btn-lime mt-6 flex items-center gap-2"
+                  onClick={() => setActiveProcessDetail(activeProcess)}
+                >
                   Aplica Ahora <ArrowRight size={18} />
                 </button>
               </div>
