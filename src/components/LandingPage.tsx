@@ -91,71 +91,57 @@ function CountUp({ end, duration = 2000, prefix = '', suffix = '' }: { end: numb
 // Route Data
 const routes = [
   {
-    id: 'strategy',
-    title: 'Diagnóstico & Estrategia',
-    eyebrow: 'Inmersión Ejecutiva',
-    desc: 'Sesiones intensivas de mapeo de procesos y arquitectura de soluciones para directivos.',
-    image: 'https://picsum.photos/seed/strategy/800/600',
+    id: 'sales',
+    title: 'Sales Auto-Pilot',
+    eyebrow: 'Ventas',
+    desc: 'Conecta tu web con tu CRM. Captura, califica y asigna leads entrantes al instante mediante IA, asegurando que ninguna oportunidad se enfríe.',
+    image: 'https://picsum.photos/seed/sales/800/600',
     featured: true,
     details: `
-      <p>Nuestro proceso de Diagnóstico y Estrategia es el punto de partida para cualquier transformación digital exitosa. No implementamos tecnología a ciegas; primero entendemos el ADN de tu operación.</p>
-      <p><strong>Lo que incluye:</strong></p>
+      <p>Sales Auto-Pilot transforma tu embudo de ventas. Olvida la entrada manual de datos y deja que nuestra IA califique y asigne leads 24/7.</p>
+      <p><strong>Características principales:</strong></p>
       <ul>
-        <li>Mapeo detallado de procesos actuales (AS-IS).</li>
-        <li>Identificación de cuellos de botella y costos ocultos.</li>
-        <li>Diseño de la arquitectura futura (TO-BE).</li>
-        <li>Selección de stack tecnológico óptimo.</li>
-        <li>Roadmap de implementación y cálculo de ROI.</li>
+        <li>Captura de leads omnicanal (Web, WhatsApp, Redes).</li>
+        <li>Calificación automática basada en reglas de negocio.</li>
+        <li>Asignación inteligente a asesores comerciales.</li>
+        <li>Seguimiento automatizado para reactivar leads fríos.</li>
       </ul>
-      <p>Este servicio está diseñado para fundadores y directivos que necesitan claridad absoluta antes de invertir en desarrollo.</p>
-    `
-  },
-  {
-    id: 'sales',
-    title: 'Ventas',
-    eyebrow: 'Automatización Comercial',
-    desc: 'Playbooks y cierre para fundadores y equipos comerciales.',
-    image: 'https://picsum.photos/seed/sales/600/400',
-    featured: false,
-    details: `
-      <p>Transformamos tu proceso comercial de un arte manual a una ciencia automatizada. Eliminamos la fricción en cada etapa del embudo para que tu equipo se concentre en cerrar, no en administrar datos.</p>
-      <p>Implementamos CRMs inteligentes, bots de calificación de leads, y secuencias de seguimiento automatizadas que aseguran que ninguna oportunidad se pierda.</p>
-    `
-  },
-  {
-    id: 'growth',
-    title: 'Growth',
-    eyebrow: 'Escala Acelerada',
-    desc: 'Adquisición, producto y escala para líderes de crecimiento.',
-    image: 'https://picsum.photos/seed/growth/600/400',
-    featured: false,
-    details: `
-      <p>La automatización es el motor del Growth Hacking. Conectamos tus canales de adquisición con tus sistemas de retención para crear bucles de crecimiento autosostenibles.</p>
-      <p>Desde la experimentación rápida hasta la personalización masiva de mensajes, te damos las herramientas para escalar tu base de usuarios sin escalar proporcionalmente tu equipo operativo.</p>
     `
   },
   {
     id: 'ai',
-    title: 'Inteligencia Artificial',
-    eyebrow: 'Innovación Aplicada',
-    desc: 'Implementación estratégica de IA para equipos y directivos.',
-    image: 'https://picsum.photos/seed/ai/600/400',
+    title: 'AI Agents Studio',
+    eyebrow: 'Inteligencia Artificial',
+    desc: 'Despliega agentes de IA entrenados con los datos de tu empresa para responder consultas, redactar correos y dar soporte 24/7.',
+    image: 'https://picsum.photos/seed/ai_agents/600/400',
     featured: false,
     details: `
-      <p>La IA no es el futuro, es el presente operativo. Integramos modelos de lenguaje (LLMs) en tus flujos de trabajo para automatizar tareas cognitivas complejas.</p>
-      <p>Análisis de documentos, generación de contenido, atención al cliente de primer nivel y toma de decisiones basada en datos, todo potenciado por agentes de IA personalizados para tu negocio.</p>
+      <p>Crea tu fuerza laboral digital. Entrena agentes de IA con tu base de conocimiento para atender clientes y empleados sin descanso.</p>
+      <p>Desde soporte técnico hasta asistentes de redacción, tus agentes trabajan integrados en tus herramientas favoritas como Slack y WhatsApp.</p>
+    `
+  },
+  {
+    id: 'growth',
+    title: 'Growth & Omnicanalidad',
+    eyebrow: 'Growth',
+    desc: 'Crea bucles de mensajes automatizados entre WhatsApp, Email y SMS. Mide conversiones en tiempo real en un dashboard unificado.',
+    image: 'https://picsum.photos/seed/growth_omni/600/400',
+    featured: false,
+    details: `
+      <p>Orquesta campañas multicanal que reaccionan al comportamiento del usuario. Envía el mensaje correcto, en el momento exacto, por el canal preferido.</p>
+      <p>Centraliza la data de conversión y optimiza tu ROI con dashboards que unifican todas tus fuentes de tráfico.</p>
     `
   },
   {
     id: 'ops',
-    title: 'Venture Capital & Ops',
-    eyebrow: 'Eficiencia Financiera',
-    desc: 'Herramientas y estrategia para levantar rondas y optimizar capital.',
-    image: 'https://picsum.photos/seed/finance/600/400',
+    title: 'Ops Sync',
+    eyebrow: 'Operaciones',
+    desc: 'Sincroniza tu facturación, gestión documental y flujos de aprobación. Cuando se cierra una venta, el resto del trabajo ocurre solo.',
+    image: 'https://picsum.photos/seed/ops_sync/600/400',
     featured: false,
     details: `
-      <p>Para startups y empresas en crecimiento, la eficiencia del capital es vital. Automatizamos tus reportes financieros, gestión de inversores y procesos de due diligence.</p>
-      <p>Mantén tu data room siempre listo y tus métricas actualizadas en tiempo real para tomar decisiones financieras con confianza y velocidad.</p>
+      <p>Elimina el trabajo administrativo post-venta. Ops Sync conecta tu CRM con tu ERP y sistema contable.</p>
+      <p>Generación automática de contratos, facturas y órdenes de servicio. Aprobaciones digitales en un clic.</p>
     `
   }
 ];
@@ -178,104 +164,104 @@ const NETWORK_NODES = [
 
 const SERVICE_MODULES = [
   {
-    id: 'sales',
-    title: 'Automatización de Ventas',
-    desc: 'Pipelines inteligentes, seguimiento automático de leads, cotizaciones dinámicas y cierre asistido.',
-    image: 'https://picsum.photos/seed/sales_auto/800/600',
-    tags: ['CRM', 'WhatsApp', 'Email']
+    id: 'approvals',
+    title: 'Flujos de Aprobación',
+    desc: 'Automatiza solicitudes de gasto, vacaciones y contratos con reglas condicionales.',
+    image: 'https://picsum.photos/seed/approvals/800/600',
+    tags: ['Slack', 'Email', 'ERP']
   },
   {
-    id: 'hr',
-    title: 'RRHH y Onboarding Digital',
-    desc: 'Reclutamiento automatizado, onboarding sin papel, gestión de nómina y evaluaciones.',
-    image: 'https://picsum.photos/seed/hr_tech/800/600',
-    tags: ['ATS', 'Slack', 'Notion']
+    id: 'onboarding',
+    title: 'Onboarding Digital 1-Clic',
+    desc: 'Crea cuentas, envía contratos y asigna tareas a nuevos empleados automáticamente.',
+    image: 'https://picsum.photos/seed/onboarding/800/600',
+    tags: ['HRIS', 'DocuSign', 'LMS']
   },
   {
-    id: 'marketing',
-    title: 'Marketing & Growth',
-    desc: 'Embudos de conversión, email marketing personalizado y reportes en tiempo real.',
-    image: 'https://picsum.photos/seed/marketing_growth/800/600',
-    tags: ['HubSpot', 'Meta', 'Google']
+    id: 'quotes',
+    title: 'Cotizaciones Dinámicas',
+    desc: 'Genera propuestas personalizadas en PDF basadas en datos del CRM al instante.',
+    image: 'https://picsum.photos/seed/quotes/800/600',
+    tags: ['CRM', 'PDF', 'Stripe']
   },
   {
-    id: 'ops',
-    title: 'Operaciones y Back-Office',
-    desc: 'Flujos de aprobación, gestión documental e integración entre sistemas.',
-    image: 'https://picsum.photos/seed/operations_back/800/600',
-    tags: ['Zapier', 'Make', 'APIs']
+    id: 'support',
+    title: 'Soporte Inteligente',
+    desc: 'Clasifica tickets y responde preguntas frecuentes con IA antes de escalar a humanos.',
+    image: 'https://picsum.photos/seed/support/800/600',
+    tags: ['Zendesk', 'Intercom', 'AI']
   },
   {
-    id: 'design',
-    title: 'Diseño y Contenido',
-    desc: 'Automatización de briefs, aprobación de activos y repositorios inteligentes.',
-    image: 'https://picsum.photos/seed/design_content/800/600',
-    tags: ['Canva', 'Airtable', 'Monday']
+    id: 'reporting',
+    title: 'Reportes Unificados',
+    desc: 'Consolida data de marketing, ventas y finanzas en un solo panel de control.',
+    image: 'https://picsum.photos/seed/reporting/800/600',
+    tags: ['Looker', 'Sheets', 'SQL']
   },
   {
-    id: 'revops',
-    title: 'RevOps y Tecnología',
-    desc: 'Alineación de ventas, marketing y servicio. CI/CD pipelines y gestión de datos.',
-    image: 'https://picsum.photos/seed/devops_tech/800/600',
-    tags: ['GitHub', 'Jira', 'n8n']
+    id: 'inventory',
+    title: 'Sincronización de Inventario',
+    desc: 'Mantén tu stock actualizado en tiempo real entre tu e-commerce y tu ERP.',
+    image: 'https://picsum.photos/seed/inventory/800/600',
+    tags: ['Shopify', 'Netsuite', 'WMS']
   }
 ];
 
 const PROCESS_STEPS = [
   {
-    id: 'diagnosis',
-    label: 'Diagnóstico',
-    title: 'Diagnóstico Profundo',
-    desc: 'Mapeo completo de tus procesos, identificación de cuellos de botella y cálculo del costo real de la ineficiencia. Sesión gratuita de 90 min.',
-    icon: Search,
-    image: 'https://picsum.photos/seed/diagnosis/1200/600',
+    id: 'connect',
+    label: 'Conecta',
+    title: 'Vincula tus cuentas',
+    desc: 'Vincula tus cuentas (HubSpot, WhatsApp, Gmail) con 1 clic de forma segura. Nuestra plataforma se integra nativamente.',
+    icon: Link,
+    image: 'https://picsum.photos/seed/connect/1200/600',
     steps: [
-      'Mapeo completo de tus procesos actuales',
-      'Identificación de cuellos de botella',
-      'Cálculo del costo real de la ineficiencia',
-      'Sesión gratuita de 90 min de entrega de resultados'
+      'Selecciona tus integraciones desde el marketplace',
+      'Autenticación segura vía OAuth',
+      'Mapeo automático de campos y datos',
+      'Verificación de conexión en tiempo real'
     ]
   },
   {
-    id: 'design',
-    label: 'Diseño',
-    title: 'Diseño de Solución',
-    desc: 'Propuesta detallada con mapa de automatización, herramientas recomendadas, cronograma y ROI proyectado. Todo documentado.',
-    icon: PenTool,
-    image: 'https://picsum.photos/seed/design/1200/600',
+    id: 'choose',
+    label: 'Elige',
+    title: 'Selecciona plantillas',
+    desc: 'Selecciona plantillas de automatización listas para usar, creadas para ventas y operaciones B2B.',
+    icon: FolderKanban,
+    image: 'https://picsum.photos/seed/templates/1200/600',
     steps: [
-      'Creación del mapa de arquitectura de automatización',
-      'Selección de herramientas No-Code/Low-Code óptimas',
-      'Definición del cronograma detallado de implementación',
-      'Proyección de ROI y documentación técnica'
+      'Explora la librería de flujos pre-construidos',
+      'Filtra por departamento o caso de uso',
+      'Previsualiza la lógica de automatización',
+      'Instala la plantilla en tu espacio de trabajo'
     ]
   },
   {
-    id: 'implementation',
-    label: 'Implementación',
-    title: 'Implementación Ágil',
-    desc: 'Construcción por sprints de 2 semanas. Resultados visibles en las primeras 4 semanas del proyecto.',
+    id: 'customize',
+    label: 'Personaliza',
+    title: 'Ajusta las reglas',
+    desc: 'Ajusta las reglas de negocio en nuestro panel visual sin necesidad de programadores. Arrastra, suelta y configura.',
+    icon: Settings,
+    image: 'https://picsum.photos/seed/customize/1200/600',
+    steps: [
+      'Editor visual de arrastrar y soltar',
+      'Configura condicionales y disparadores',
+      'Personaliza mensajes y respuestas de IA',
+      'Define roles y permisos de usuarios'
+    ]
+  },
+  {
+    id: 'enjoy',
+    label: 'Disfruta',
+    title: 'Enciende el flujo',
+    desc: 'Observa las métricas en tiempo real mientras el sistema hace el trabajo pesado. Escala sin fricción.',
     icon: Rocket,
-    image: 'https://picsum.photos/seed/implementation/1200/600',
+    image: 'https://picsum.photos/seed/metrics/1200/600',
     steps: [
-      'Configuración de entornos y cuentas',
-      'Desarrollo por sprints de 2 semanas',
-      'Pruebas de integración y calidad (QA)',
-      'Despliegue y entrega de resultados visibles'
-    ]
-  },
-  {
-    id: 'improvement',
-    label: 'Mejora',
-    title: 'Seguimiento y Mejora',
-    desc: 'KPIs mensuales, optimización continua, capacitación de tu equipo y soporte post-implementación incluido.',
-    icon: TrendingUp,
-    image: 'https://picsum.photos/seed/improvement/1200/600',
-    steps: [
-      'Monitoreo de KPIs y métricas de éxito',
-      'Optimización continua de flujos de trabajo',
-      'Capacitación especializada a tu equipo',
-      'Soporte post-implementación y mantenimiento'
+      'Activa tus flujos de trabajo',
+      'Monitorea ejecuciones en vivo',
+      'Analiza métricas de rendimiento y ahorro',
+      'Recibe notificaciones de hitos importantes'
     ]
   }
 ];
@@ -283,50 +269,52 @@ const PROCESS_STEPS = [
 const PRICING_PLANS = [
   {
     id: 'starter',
-    name: 'StarterIA',
+    name: 'Starter',
     tag: 'Plan Básico',
-    price: '$500',
-    period: '/mes',
-    subPrice: 'o $5M COP',
-    desc: 'Ideal para pruebas iniciales y pymes pequeñas.',
+    price: '$99',
+    period: '/ mes',
+    subPrice: '',
+    desc: 'El motor básico para digitalizar tu equipo.',
     features: [
-      'Auditoría de procesos (1 flujo clave)',
-      'Automatización básica (leads/CRM)',
-      'Dashboard simple',
-      'Soporte email (48h)'
+      'Conexión a 3 apps externas.',
+      '1,000 ejecuciones de automatización/mes.',
+      'Acceso a plantillas estándar.',
+      'Soporte comunitario.',
+      '1 usuario administrador.'
     ],
     highlight: false
   },
   {
     id: 'scale',
-    name: 'ScaleIA',
-    tag: 'Plan Crecimiento',
-    price: '$2,000',
-    period: '/mes',
-    subPrice: 'o $18M COP anual',
-    desc: 'Para escalar ventas B2B medianas.',
+    name: 'Scale',
+    tag: 'Más Popular',
+    price: '$299',
+    period: '/ mes',
+    subPrice: '',
+    desc: 'Para empresas que escalan sus ventas B2B.',
     features: [
-      'Integraciones (WhatsApp, HubSpot, ERP)',
-      'Automatizaciones multi-flujo + IA básica',
-      'SLA 8h',
-      'Analítica PowerBI + onboarding'
+      'Integraciones premium (WhatsApp, ERPs).',
+      'Inteligencia Artificial básica incluida.',
+      '10,000 ejecuciones/mes.',
+      'Soporte por email prioritario.',
+      '5 usuarios administradores.'
     ],
     highlight: true
   },
   {
     id: 'elite',
-    name: 'EliteIA',
-    tag: 'Plan Enterprise',
-    price: '$10,000+',
-    period: '/mes',
-    subPrice: 'o custom',
-    desc: 'Máxima personalización para grandes empresas.',
+    name: 'Enterprise',
+    tag: 'Custom',
+    price: '$1,499+',
+    period: '/ mes',
+    subPrice: '',
+    desc: 'La solución Done-For-You.',
     features: [
-      'API full, agentes IA avanzados',
-      'Seguridad enterprise',
-      'Soporte 24/7 dedicado, SLAs 99.9%',
-      'Piloto + escalado ilimitado',
-      'Consultoría estratégica'
+      'Setup e implementación incluida.',
+      'Agentes IA personalizados.',
+      'Límites extendidos y personalizados.',
+      'Account manager dedicado.',
+      'SLA de soporte garantizado.'
     ],
     highlight: false
   }
@@ -637,12 +625,12 @@ export default function LandingPage() {
         {/* REVERT BUTTON REMOVED */}
 
         <ul className="nav-links">
-          <li><a href="#explore">Rutas</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#about">Consultores</a></li>
-          <li><a href="#how">Metodología</a></li>
-          <li><a href="#benefits">Resultados</a></li>
-          <li><a href="#cta" className="nav-cta">Agendar cita</a></li>
+          <li><a href="#explore">Soluciones</a></li>
+          <li><a href="#services">Ecosistema</a></li>
+          <li><a href="#about">Plataforma</a></li>
+          <li><a href="#how">Cómo Funciona</a></li>
+          <li><a href="#pricing">Precios</a></li>
+          <li><a href="#cta" className="nav-cta">Comenzar Gratis</a></li>
         </ul>
       </nav>
 
@@ -720,10 +708,10 @@ export default function LandingPage() {
             <span className="t-mag">Escala</span> sin fricción.<br />
             <span className="t-blue">Vuélvelo simple.</span>
           </h1>
-          <p className="hero-sub">Transformamos operaciones manuales y costosas en flujos inteligentes — en ventas, RRHH, marketing, operaciones, diseño y DevOps. Consultoría especializada para empresas colombianas que quieren crecer sin contratar más.</p>
+          <p className="hero-sub">La plataforma integral de IA que conecta tus herramientas, califica tus leads y automatiza tus flujos de trabajo en ventas, RRHH y operaciones. Todo en un solo lugar, sin escribir una línea de código.</p>
           <div className="hero-actions">
-            <a href="#cta" className="btn-mag btn-xl">Agenda tu diagnóstico gratuito</a>
-            <a href="#explore" className="btn-outline btn-xl">Explorar rutas →</a>
+            <a href="#cta" className="btn-mag btn-xl">Crear cuenta gratis</a>
+            <a href="#explore" className="btn-outline btn-xl">Ver demostración →</a>
           </div>
           <div className="hero-stats">
             <div><div className="stat-val" data-target="70">0</div><div className="stat-lbl">% reducción tiempo<br />en tareas manuales</div></div>
@@ -735,8 +723,8 @@ export default function LandingPage() {
 
       {/* ════ EXPLORE (Dynamic Boxes) ════ */}
       <section id="explore" className="routes-section">
-        <div className="eyebrow sd-up">Rutas de Transformación</div>
-        <h2 className="section-title sd-up" style={{marginBottom: '48px'}}>Programas diseñados para<br/>cada etapa de tu crecimiento</h2>
+        <div className="eyebrow sd-up">Ecosistema Modular</div>
+        <h2 className="section-title sd-up" style={{marginBottom: '48px'}}>Las herramientas que necesitas<br/>para operar en piloto automático</h2>
         
         <div className="route-grid">
           {routes.map((route) => (
@@ -840,10 +828,10 @@ export default function LandingPage() {
       <section id="services">
         <div className="services-head">
           <div>
-            <div className="eyebrow sd-left">Servicios</div>
-            <h2 className="section-title sd-left">Automatización<br />en cada área<br />de tu empresa</h2>
+            <div className="eyebrow sd-left">Casos de Uso</div>
+            <h2 className="section-title sd-left">Un ecosistema conectado<br />para toda tu empresa</h2>
           </div>
-          <div className="section-desc sd-right">Sin importar si el desafío está en ventas, RRHH, marketing, diseño, operaciones o tecnología — tenemos la metodología para resolverlo con precisión.</div>
+          <div className="section-desc sd-right">Deja atrás los silos de información. Longitudinal centraliza los procesos de cada departamento para que operen como un solo motor sincronizado.</div>
         </div>
         
         <div className="services-split-layout sd-up">
@@ -887,7 +875,7 @@ export default function LandingPage() {
       {/* ════ TOOLS BAND ════ */}
       <div className="tools-band warm-bg">
         <div className="tools-band-title">
-          Herramientas y plataformas que hemos conectado para automatizar
+          Integraciones plug & play con el software que ya utilizas.
         </div>
         
         {/* V2: Professional Brand Icons */}
@@ -920,21 +908,20 @@ export default function LandingPage() {
           <div className="mc-grid">
             <div className="mc-content">
               <h2>
-                Donde las empresas ágiles<br />
-                <span className="t-gray">construyen ventajas definitivas</span>
+                El motor operativo<br />
+                <span className="t-gray">de las empresas ágiles</span>
               </h2>
               <p className="mc-desc">
-                Los líderes más ambiciosos de Colombia aprendiendo de quienes construyeron sistemas escalables.
+                Infraestructura tecnológica de grado Enterprise, empaquetada en una plataforma diseñada para equipos que necesitan velocidad.
               </p>
-              <a href="#how" className="btn-lime">Conoce el método</a>
+              <a href="#how" className="btn-lime">Cómo funciona</a>
 
               <div className="mc-features">
-                <div className="mc-feat-item"><span className="mc-feat-icon">⚡</span> Diagnóstico selectivo</div>
-                <div className="mc-feat-item"><span className="mc-feat-icon">🏗️</span> Tecnología Enterprise</div>
-                <div className="mc-feat-item"><span className="mc-feat-icon">📚</span> Frameworks probados</div>
-                <div className="mc-feat-item"><span className="mc-feat-icon">🚀</span> Implementación ágil</div>
-                <div className="mc-feat-item"><span className="mc-feat-icon">🤝</span> Soporte continuo</div>
-                <div className="mc-feat-item"><span className="mc-feat-icon">✅</span> Resultados verificados</div>
+                <div className="mc-feat-item"><span className="mc-feat-icon">⚡</span> Despliegue en 1 clic</div>
+                <div className="mc-feat-item"><span className="mc-feat-icon">🏗️</span> API First y Webhooks</div>
+                <div className="mc-feat-item"><span className="mc-feat-icon">📚</span> Plantillas pre-construidas</div>
+                <div className="mc-feat-item"><span className="mc-feat-icon">🚀</span> Escalabilidad en la nube</div>
+                <div className="mc-feat-item"><span className="mc-feat-icon">✅</span> Seguridad y Encriptación</div>
               </div>
             </div>
             <div className="mc-image">
@@ -961,9 +948,9 @@ export default function LandingPage() {
 
       {/* ════ PROCESS (dark) ════ */}
       <section id="how">
-        <div className="eyebrow on-dark sd-up">Metodología</div>
-        <h2 className="section-title on-dark sd-up">Así trabajamos contigo</h2>
-        <p className="section-desc on-dark sd-up">Un proceso claro y estructurado desde el diagnóstico hasta los resultados medibles.</p>
+        <div className="eyebrow on-dark sd-up">En marcha en minutos</div>
+        <h2 className="section-title on-dark sd-up">En marcha en minutos, no en meses.</h2>
+        <p className="section-desc on-dark sd-up">Configura tu motor de automatización en 4 pasos sencillos.</p>
         
         <div className="process-tabs-container sd-up">
           <div className="process-tabs">
@@ -1008,46 +995,46 @@ export default function LandingPage() {
         <div className="benefits-head">
           <div>
             <div className="eyebrow on-dark sd-left">Resultados</div>
-            <h2 className="section-title on-dark sd-left">Números que<br />hablan por sí solos</h2>
+            <h2 className="section-title on-dark sd-left">El impacto directo de<br />nuestro software</h2>
           </div>
-          <div className="section-desc on-dark sd-right">Resultados reales obtenidos por PyMEs colombianas que implementaron automatización de procesos con nuestra metodología.</div>
+          <div className="section-desc on-dark sd-right">Métricas reales de equipos que operan sobre Longitudinal.</div>
         </div>
         <div className="benefits-grid">
           <div className="benefit-card">
             <div className="bc-icon-wrap"><Clock size={32} strokeWidth={1.5} /></div>
             <div className="bc-val"><CountUp end={70} prefix="-" suffix="%" /></div>
             <div className="bc-title">Tiempo en tareas manuales</div>
-            <div className="bc-desc">Las empresas recuperan 2–3 horas diarias por colaborador eliminando trabajo repetitivo.</div>
+            <div className="bc-desc">Nuestro algoritmo de enrutamiento ahorra 2 horas diarias por colaborador.</div>
           </div>
           <div className="benefit-card">
             <div className="bc-icon-wrap"><DollarSign size={32} strokeWidth={1.5} /></div>
             <div className="bc-val"><CountUp end={45} prefix="-" suffix="%" /></div>
             <div className="bc-title">Reducción de costos operativos</div>
-            <div className="bc-desc">Menos errores, menos reprocesos, menos tiempo de gestión. El ahorro se reinvierte en crecimiento.</div>
+            <div className="bc-desc">Menos errores, menos reprocesos. La eficiencia se traduce en margen.</div>
           </div>
           <div className="benefit-card">
             <div className="bc-icon-wrap"><BarChart size={32} strokeWidth={1.5} /></div>
             <div className="bc-val"><CountUp end={60} prefix="+" suffix="%" /></div>
-            <div className="bc-title">Capacidad sin contratar</div>
-            <div className="bc-desc">Atiende más clientes y procesa más pedidos con el mismo equipo actual.</div>
+            <div className="bc-title">Capacidad de procesamiento</div>
+            <div className="bc-desc">Escala tus operaciones sin necesidad de aumentar la plantilla.</div>
           </div>
           <div className="benefit-card">
             <div className="bc-icon-wrap"><CheckCircle size={32} strokeWidth={1.5} /></div>
             <div className="bc-val"><CountUp end={85} prefix="+" suffix="%" /></div>
             <div className="bc-title">Precisión en datos</div>
-            <div className="bc-desc">Cero errores de transcripción. Datos limpios, confiables y en tiempo real.</div>
+            <div className="bc-desc">Dashboards en tiempo real con 0% de errores de transcripción.</div>
           </div>
           <div className="benefit-card">
             <div className="bc-icon-wrap"><Calendar size={32} strokeWidth={1.5} /></div>
-            <div className="bc-val"><CountUp end={4} suffix=" sem" /></div>
-            <div className="bc-title">Primeros resultados</div>
-            <div className="bc-desc">En un mes ya ves el impacto. No esperas trimestres para justificar la inversión.</div>
+            <div className="bc-val"><CountUp end={15} suffix=" min" /></div>
+            <div className="bc-title">Tiempo de configuración</div>
+            <div className="bc-desc">Conecta tus apps y lanza tu primera automatización en minutos.</div>
           </div>
           <div className="benefit-card">
             <div className="bc-icon-wrap"><Smile size={32} strokeWidth={1.5} /></div>
             <div className="bc-val"><CountUp end={40} prefix="+" suffix="%" /></div>
             <div className="bc-title">Satisfacción del equipo</div>
-            <div className="bc-desc">Cuando el equipo deja las tareas mecánicas, recupera energía para trabajo estratégico.</div>
+            <div className="bc-desc">Elimina el trabajo robótico y libera a tu equipo para tareas creativas.</div>
           </div>
         </div>
         <div className="ticker-wrap">
@@ -1079,11 +1066,11 @@ export default function LandingPage() {
       {/* ════ TESTIMONIALS ════ */}
       <section id="testimonials">
         <div className="eyebrow sd-up">Casos Reales</div>
-        <h2 className="section-title sd-up">Lo que dicen las empresas<br />que transformamos</h2>
+        <h2 className="section-title sd-up">Lo que dicen las empresas<br />que usan Longitudinal</h2>
         <div className="testi-grid">
-          <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">Automatizamos todo el proceso de cotización y seguimiento de ventas. Lo que antes tomaba 2 días de trabajo manual, ahora sucede en segundos. Nuestro equipo duplicó productividad sin contratar nadie nuevo.</p><div className="tc-author"><div className="tc-av av1">ML</div><div><div className="tc-name">María López</div><div className="tc-co">Gerente Comercial · Servicios · Bogotá</div></div></div></div>
-          <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">Teníamos 4 personas procesando órdenes de compra manualmente. Después de la implementación, ese proceso es completamente automático. Esas personas ahora trabajan en tareas estratégicas. ROI evidente en el primer mes.</p><div className="tc-author"><div className="tc-av av2">CR</div><div><div className="tc-name">Carlos Restrepo</div><div className="tc-co">Director de Operaciones · Industrial · Medellín</div></div></div></div>
-          <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">Como agencia de marketing, el caos operativo era nuestro mayor problema. Ahora los procesos de briefing, aprobación y entrega están automatizados. Los clientes están más satisfechos y el equipo trabaja con mucho menos estrés.</p><div className="tc-author"><div className="tc-av av3">AG</div><div><div className="tc-name">Andrea Gómez</div><div className="tc-co">Fundadora · Agencia Digital · Cali</div></div></div></div>
+          <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">Implementar Longitudinal fue tan fácil como abrir una cuenta. El módulo de ventas califica nuestros leads automáticamente. Duplicamos productividad sin contratar a nadie más.</p><div className="tc-author"><div className="tc-av av1">ML</div><div><div className="tc-name">María López</div><div className="tc-co">Gerente Comercial · Servicios · Bogotá</div></div></div></div>
+          <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">Con Ops Sync, nuestras órdenes de compra se procesan solas. Lo que antes requería 4 personas, ahora es automático. El ROI fue evidente desde el primer mes de suscripción.</p><div className="tc-author"><div className="tc-av av2">CR</div><div><div className="tc-name">Carlos Restrepo</div><div className="tc-co">Director de Operaciones · Industrial · Medellín</div></div></div></div>
+          <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">La plataforma centralizó todo nuestro caos operativo. Briefs, aprobaciones y entregas fluyen sin correos perdidos. Es el sistema operativo que nuestra agencia necesitaba.</p><div className="tc-author"><div className="tc-av av3">AG</div><div><div className="tc-name">Andrea Gómez</div><div className="tc-co">Fundadora · Agencia Digital · Cali</div></div></div></div>
         </div>
       </section>
 
@@ -1153,17 +1140,17 @@ export default function LandingPage() {
         <div className="faq-grid">
           <div className="faq-head">
             <h2>Preguntas frecuentes.</h2>
-            <p className="faq-desc">Encuentra respuestas sobre nuestra metodología, tiempos de implementación, costos y cómo funciona nuestro acompañamiento.</p>
-            <a href="#cta" className="btn-dark">Aprender más</a>
+            <p className="faq-desc">Todo lo que necesitas saber sobre Longitudinal antes de empezar.</p>
+            <a href="#cta" className="btn-dark">Centro de Ayuda</a>
           </div>
           <div className="faq-list">
             {[
-              { q: "¿Qué es Longitudinal y qué tipo de servicios ofrecen?", a: "Somos una consultora especializada en automatización de procesos para PyMEs. Ofrecemos diagnóstico, diseño de arquitectura y desarrollo de soluciones automatizadas en ventas, operaciones, RRHH y finanzas." },
-              { q: "¿En qué se diferencia de una agencia de software tradicional?", a: "No desarrollamos software desde cero (lo cual es lento y costoso). Integramos herramientas No-Code y Low-Code (como Zapier, Make, HubSpot) que ya existen, conectándolas entre sí. Esto nos permite entregar soluciones en semanas, no meses." },
-              { q: "¿Cuánto cuestan los programas de implementación?", a: "Depende de la complejidad. Tenemos paquetes de diagnóstico desde $500 USD y proyectos de implementación completa desde $2,000 USD. El ROI suele recuperarse en los primeros 3 meses." },
-              { q: "¿Cómo es el proceso de diagnóstico?", a: "Es una inmersión de 1 a 2 semanas donde mapeamos tus procesos actuales, entrevistamos a tu equipo y detectamos ineficiencias. Entregamos un reporte detallado con el plan de acción y presupuesto exacto." },
-              { q: "¿Ofrecen soporte después de la automatización?", a: "Sí. Todos nuestros proyectos incluyen 30 días de soporte intensivo post-lanzamiento. También ofrecemos planes de mantenimiento mensual para asegurar que todo siga funcionando mientras tu empresa escala." },
-              { q: "¿Necesito tener equipo técnico interno?", a: "No. Nosotros nos encargamos de toda la parte técnica. Además, capacitamos a tu equipo operativo para que puedan usar las nuevas herramientas sin depender de ingenieros." }
+              { q: "¿Necesito saber programar?", a: "Absolutamente no. Longitudinal es una plataforma intuitiva. Si sabes arrastrar y soltar cajas, sabes usar nuestro software." },
+              { q: "¿Tienen prueba gratuita?", a: "Sí, ofrecemos 14 días gratis en nuestros planes Starter y Scale para que pruebes el valor del sistema antes de pagar." },
+              { q: "¿Qué pasa si necesito una automatización muy compleja?", a: "Nuestro plan Enterprise incluye soporte de ingeniería. Nosotros construimos los flujos complejos por ti directamente en tu cuenta." },
+              { q: "¿Mis datos están seguros?", a: "Cumplimos con estándares internacionales de seguridad en la nube. Tus datos están encriptados y nunca entrenamos modelos públicos con la información de tu empresa." },
+              { q: "¿Puedo cancelar en cualquier momento?", a: "Sí, no hay contratos forzosos en los planes Starter y Scale. Puedes cancelar tu suscripción mensual cuando quieras." },
+              { q: "¿Se integra con mi software actual?", a: "Longitudinal se conecta nativamente con más de 5,000 aplicaciones incluyendo HubSpot, Salesforce, Google Workspace, Microsoft 365 y muchas más." }
             ].map((item, i) => (
               <div key={i} className="faq-item" onClick={(e) => e.currentTarget.classList.toggle('open')}>
                 <button className="faq-question">
@@ -1196,7 +1183,7 @@ export default function LandingPage() {
               </svg>
               Longitudinal
             </div>
-            <p className="fd">Consultoría especializada en automatización de procesos para PyMEs colombianas. Reducimos tiempos, costos y carga operativa con tecnología que realmente funciona.</p>
+            <p className="fd">La plataforma de automatización integral para empresas que quieren escalar. Conecta tus herramientas, automatiza flujos y crece sin fricción.</p>
             <div className="social-row">
               <a href="#" className="soc">in</a>
               <a href="#" className="soc">𝕏</a>
@@ -1204,13 +1191,13 @@ export default function LandingPage() {
               <a href="#" className="soc">💬</a>
             </div>
           </div>
-          <div className="fc"><h4>Servicios</h4><ul><li><a href="#services">Ventas</a></li><li><a href="#services">RRHH Digital</a></li><li><a href="#services">Marketing</a></li><li><a href="#services">Operaciones</a></li><li><a href="#services">RevOps</a></li><li><a href="#services">Diseño</a></li></ul></div>
-          <div className="fc"><h4>Empresa</h4><ul><li><a href="#about">Consultores</a></li><li><a href="#how">Metodología</a></li><li><a href="#benefits">Resultados</a></li><li><a href="#testimonials">Casos de Éxito</a></li><li><a href="#cta">Contacto</a></li></ul></div>
-          <div className="fc"><h4>Contacto</h4><ul><li><a href="#">📍 Colombia</a></li><li><a href="#">📞 +57 318 871 3986</a></li><li><a href="#">📧 hola@longitudinal.co</a></li><li><a href="#">🕐 Lun–Vie 8am–6pm</a></li></ul></div>
+          <div className="fc"><h4>Módulos</h4><ul><li><a href="#explore">Sales Auto-Pilot</a></li><li><a href="#explore">AI Agents</a></li><li><a href="#explore">Growth</a></li><li><a href="#explore">Ops Sync</a></li></ul></div>
+          <div className="fc"><h4>Plataforma</h4><ul><li><a href="#how">Cómo Funciona</a></li><li><a href="#services">Casos de Uso</a></li><li><a href="#pricing">Precios</a></li><li><a href="#testimonials">Clientes</a></li><li><a href="#cta">Empezar</a></li></ul></div>
+          <div className="fc"><h4>Contacto</h4><ul><li><a href="#">📍 Colombia</a></li><li><a href="#">📞 +57 318 871 3986</a></li><li><a href="#">📧 hola@longitudinal.co</a></li><li><a href="#">🕐 Soporte 24/7</a></li></ul></div>
         </div>
         <div className="footer-bot">
           <span>© 2025 Longitudinal · Todos los derechos reservados</span>
-          <span>Hecho para PyMEs colombianas</span>
+          <span>Infraestructura Enterprise</span>
         </div>
       </footer>
 
