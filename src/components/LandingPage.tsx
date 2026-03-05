@@ -275,16 +275,12 @@ const PROCESS_STEPS = [
 const PRICING_PLANS = [
   {
     id: 'starter',
-<<<<<<< HEAD
     name: 'StarterIA',
-=======
-    name: 'Starter',
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
     tag: 'Plan Básico',
     price: '$99',
     period: '/ mes',
     subPrice: '',
-<<<<<<< HEAD
+
     desc: 'Para microempresas y pymes que nunca han automatizado. Resolves sus dolores más urgentes desde el día 1.',
     highlight: false,
     categories: [
@@ -346,26 +342,12 @@ const PRICING_PLANS = [
   {
     id: 'scale',
     name: 'ScaleIA',
-=======
-    desc: 'El motor básico para digitalizar tu equipo.',
-    features: [
-      'Conexión a 3 apps externas.',
-      '1,000 ejecuciones de automatización/mes.',
-      'Acceso a plantillas estándar.',
-      'Soporte comunitario.',
-      '1 usuario administrador.'
-    ],
-    highlight: false
-  },
-  {
-    id: 'scale',
-    name: 'Scale',
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
+
     tag: 'Más Popular',
     price: '$299',
     period: '/ mes',
     subPrice: '',
-<<<<<<< HEAD
+
     desc: 'Para pymes en crecimiento que quieren que cada área de la empresa funcione sola y conectada.',
     highlight: true,
     categories: [
@@ -554,48 +536,14 @@ function FeatureAccordion({ title, items, highlight }: { key?: number; title: st
   );
 }
 
-=======
-    desc: 'Para empresas que escalan sus ventas B2B.',
-    features: [
-      'Integraciones premium (WhatsApp, ERPs).',
-      'Inteligencia Artificial básica incluida.',
-      '10,000 ejecuciones/mes.',
-      'Soporte por email prioritario.',
-      '5 usuarios administradores.'
-    ],
-    highlight: true
-  },
-  {
-    id: 'elite',
-    name: 'Enterprise',
-    tag: 'Custom',
-    price: '$1,499+',
-    period: '/ mes',
-    subPrice: '',
-    desc: 'La solución Done-For-You.',
-    features: [
-      'Setup e implementación incluida.',
-      'Agentes IA personalizados.',
-      'Límites extendidos y personalizados.',
-      'Account manager dedicado.',
-      'SLA de soporte garantizado.'
-    ],
-    highlight: false
-  }
-];
 
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
 export default function LandingPage() {
   const [activeRouteId, setActiveRouteId] = useState<string | null>(null);
   const activeRoute = routes.find(r => r.id === activeRouteId);
   const [activeService, setActiveService] = useState(SERVICE_MODULES[0]);
   const [activeProcess, setActiveProcess] = useState(PROCESS_STEPS[0]);
   const [activeProcessDetail, setActiveProcessDetail] = useState<typeof PROCESS_STEPS[0] | null>(null);
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
   // State to toggle between V1 (Old) and V2 (New) designs for comparison
   // const [isV2, setIsV2] = useState(true); // Removed as V2 is now permanent
 
@@ -603,11 +551,7 @@ export default function LandingPage() {
     /* ─── CSS Scroll-driven support check ─── */
     const hasSDT = CSS.supports('animation-timeline', 'scroll()');
     const sp = document.getElementById('sp');
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
     const handleScrollProgress = () => {
       if (!hasSDT && sp) {
         sp.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
@@ -982,52 +926,53 @@ export default function LandingPage() {
               <div
                 key={i}
                 className="fchip"
+                style={{
+                  left: `${node.x}%`,
+                  top: `${node.y}%`,
+                  transform: 'translate(-50%, -50%)',
+                  opacity: i % 3 === 0 ? 0.9 : 0.7, // Varying opacity
+                  zIndex: i % 2 === 0 ? 2 : 1
+                }}
+                data-px={(Math.random() - 0.5) * 0.15}
+                data-py={(Math.random() - 0.5) * 0.25}
+              >
+                <span className="fchip-dot" style={{ background: node.color }}></span>
+                {node.label}
+              </div>
+            ))
+          }
+        </div >
 
-                top: `${node.y}%`,
-              transform: 'translate(-50%, -50%)',
-          opacity: i % 3 === 0 ? 0.9 : 0.7, // Varying opacity
-          zIndex: i % 2 === 0 ? 2 : 1
-        }}
-          data-px={(Math.random() - 0.5) * 0.15}
-          data-py={(Math.random() - 0.5) * 0.25}
-      >
-          <span className="fchip-dot" style={{ background: node.color }}></span>
-          {node.label}
+        <div className="hero-content">
+          {/* Tag removed as requested */}
+          <h1 className="hero-title">
+            Automatiza tus<br />procesos.<br />
+            <span className="t-mag">Escala</span> sin fricción.<br />
+            <span className="t-blue">Vuélvelo simple.</span>
+          </h1>
+          <p className="hero-sub">La plataforma integral de IA que conecta tus herramientas, califica tus leads y automatiza tus flujos de trabajo en ventas, RRHH y operaciones. Todo en un solo lugar, sin escribir una línea de código.</p>
+          <div className="hero-actions">
+            <a href="#cta" className="btn-mag btn-xl">Crear cuenta gratis</a>
+            <a href="#explore" className="btn-outline btn-xl">Ver demostración →</a>
+          </div>
+          <div className="hero-stats">
+            <div><div className="stat-val" data-target="70">0</div><div className="stat-lbl">% reducción tiempo<br />en tareas manuales</div></div>
+            <div><div className="stat-val" data-target="45">0</div><div className="stat-lbl">% ahorro en<br />costos operativos</div></div>
+            <div><div className="stat-val" data-target="30">0</div><div className="stat-lbl">+ empresas PyME<br />transformadas</div></div>
+          </div>
         </div>
-        ))
-  }
-      </div >
+      </section >
 
-      <div className="hero-content">
-        {/* Tag removed as requested */}
-        <h1 className="hero-title">
-          Automatiza tus<br />procesos.<br />
-          <span className="t-mag">Escala</span> sin fricción.<br />
-          <span className="t-blue">Vuélvelo simple.</span>
-        </h1>
-        <p className="hero-sub">La plataforma integral de IA que conecta tus herramientas, califica tus leads y automatiza tus flujos de trabajo en ventas, RRHH y operaciones. Todo en un solo lugar, sin escribir una línea de código.</p>
-        <div className="hero-actions">
-          <a href="#cta" className="btn-mag btn-xl">Crear cuenta gratis</a>
-          <a href="#explore" className="btn-outline btn-xl">Ver demostración →</a>
-        </div>
-        <div className="hero-stats">
-          <div><div className="stat-val" data-target="70">0</div><div className="stat-lbl">% reducción tiempo<br />en tareas manuales</div></div>
-          <div><div className="stat-val" data-target="45">0</div><div className="stat-lbl">% ahorro en<br />costos operativos</div></div>
-          <div><div className="stat-val" data-target="30">0</div><div className="stat-lbl">+ empresas PyME<br />transformadas</div></div>
-        </div>
-      </div>
-    </section >
-
-      {/* ════ EXPLORE (Dynamic Boxes) ════ */ }
-      < section id = "explore" className = "routes-section" >
+      {/* ════ EXPLORE (Dynamic Boxes) ════ */}
+      < section id="explore" className="routes-section" >
         <div className="eyebrow sd-up">Ecosistema Modular</div>
 
-        <h2 className="section-title sd-up" style={{marginBottom: '48px'}}>Las herramientas que necesitas<br/>para operar en piloto automático</h2>
-        
+        <h2 className="section-title sd-up" style={{ marginBottom: '48px' }}>Las herramientas que necesitas<br />para operar en piloto automático</h2>
+
         <div className="route-grid">
           {routes.map((route) => (
-            <div 
-              key={route.id} 
+            <div
+              key={route.id}
 
               className={`route-card ${route.featured ? 'featured' : 'standard'}`}
               onClick={() => setActiveRouteId(route.id)}
@@ -1039,167 +984,133 @@ export default function LandingPage() {
 
 
               {route.featured ? (
-            <>
-              <div className="rc-content-wrap">
-                <div className="rc-eyebrow"><span style={{ fontSize: '1.2em' }}>↗</span> {route.eyebrow}</div>
+                <>
+                  <div className="rc-content-wrap">
+                    <div className="rc-eyebrow"><span style={{ fontSize: '1.2em' }}>↗</span> {route.eyebrow}</div>
 
-                <div className="rc-title">{route.title}</div>
-                <div className="rc-desc">{route.desc}</div>
-                <div className="btn-explore">Explorar {route.title.toLowerCase()}</div>
-              </div>
-              <div className="rc-image-wrap"></div>
-            </>
-          ) : (
-            <div className="rc-content-wrap">
-              <div className="rc-title">{route.title}</div>
-              <div className="rc-desc">{route.desc}</div>
-              <div className="btn-explore">Explorar {route.id}</div>
-            </div>
-          )}
-        </div>
-          ))}
-      </div >
-      </section >
-
-    {/* ════ DETAIL VIEW OVERLAY ════ */ }
-  {
-    activeRoute && (
-      <div className="detail-overlay">
-        <div className="do-header">
-          <div className="logo"><span className="logo-mark">L</span>Longitudinal</div>
-          <button className="do-close" onClick={() => setActiveRouteId(null)}>✕</button>
-        </div>
-        <div className="do-content">
-          <img src={activeRoute.image} alt={activeRoute.title} className="do-hero-img" referrerPolicy="no-referrer" />
-          <div className="eyebrow">{activeRoute.eyebrow}</div>
-          <h1 className="do-title">{activeRoute.title}</h1>
-          <div className="do-body" dangerouslySetInnerHTML={{ __html: activeRoute.details || '' }}></div>
-
-          <div style={{ marginTop: '48px' }}>
-
-            <a href="#cta" onClick={() => setActiveRouteId(null)} className="btn-mag btn-xl">Agendar diagnóstico para {activeRoute.title}</a>
-          </div>
-        </div>
-      </div >
-    )
-  }
-
-  {/* ════ PROCESS DETAIL OVERLAY ════ */ }
-  {
-    activeProcessDetail && (
-      <div className="detail-overlay">
-        <div className="do-header">
-          <div className="logo"><span className="logo-mark">L</span>Longitudinal</div>
-          <button className="do-close" onClick={() => setActiveProcessDetail(null)}>✕</button>
-        </div>
-        <div className="do-content">
-          <img src={activeProcessDetail.image} alt={activeProcessDetail.title} className="do-hero-img" referrerPolicy="no-referrer" />
-          <div className="eyebrow">{activeProcessDetail.label}</div>
-          <h1 className="do-title">{activeProcessDetail.title}</h1>
-
-          <p className="do-desc" style={{ fontSize: '1.25rem', lineHeight: '1.6', marginBottom: '2rem', color: 'var(--text-mid)' }}>{activeProcessDetail.desc}</p>
-
-          <div className="mt-8">
-            <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1.5rem', color: 'var(--text)' }}>Pasos para realizar este proceso:</h3>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {activeProcessDetail.steps?.map((step, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-                  <div style={{
-                    background: 'var(--mag)',
-                    color: 'white',
-                    borderRadius: '50%',
-                    width: '2rem',
-                    height: '2rem',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-
-            < p className="do-desc" style={{ fontSize: '1.25rem', lineHeight: '1.6', marginBottom: '2rem', color: 'var(--text-mid)' }}>{activeProcessDetail.desc}</p>
-
-                  <div className="mt-8">
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1.5rem', color: 'var(--text)' }}>Pasos para realizar este proceso:</h3>
-                    <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                      {activeProcessDetail.steps?.map((step, i) => (
-                        <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
-                          <div style={{
-                            background: 'var(--mag)',
-                            color: 'white',
-                            borderRadius: '50%',
-                            width: '2rem',
-                            height: '2rem',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            flexShrink: 0,
-
-                            fontWeight: 'bold'
-                          }}>
-                            {i + 1}
-                          </div>
-
-                          <span style={{ fontSize: '1.1rem', color: 'var(--text-mid)' }}>{step}</span>
-
-                        </li >
-                      ))
-                      }
-                    </ul >
-                  </div >
-
-
-                  <div style={{ marginTop: '48px' }}>
-
-                    <a href="#cta" onClick={() => setActiveProcessDetail(null)} className="btn-mag btn-xl">Agendar {activeProcessDetail.title}</a>
+                    <div className="rc-title">{route.title}</div>
+                    <div className="rc-desc">{route.desc}</div>
+                    <div className="btn-explore">Explorar {route.title.toLowerCase()}</div>
                   </div>
+                  <div className="rc-image-wrap"></div>
+                </>
+              ) : (
+                <div className="rc-content-wrap">
+                  <div className="rc-title">{route.title}</div>
+                  <div className="rc-desc">{route.desc}</div>
+                  <div className="btn-explore">Explorar {route.id}</div>
                 </div>
-        </div >
-          )
-  }
-
-          {/* ════ SERVICES ════ */}
-          <section id="services">
-            <div className="services-head">
-              <div>
-                <div className="eyebrow sd-left">Casos de Uso</div>
-                <h2 className="section-title sd-left">Un ecosistema conectado<br />para toda tu empresa</h2>
-              </div>
-              <div className="section-desc sd-right">Deja atrás los silos de información. Longitudinal centraliza los procesos de cada departamento para que operen como un solo motor sincronizado.</div>
+              )}
             </div>
+          ))}
+        </div>
+      </section>
 
+      {/* ════ DETAIL VIEW OVERLAY ════ */}
+      {
+        activeRoute && (
+          <div className="detail-overlay">
+            <div className="do-header">
+              <div className="logo"><span className="logo-mark">L</span>Longitudinal</div>
+              <button className="do-close" onClick={() => setActiveRouteId(null)}>✕</button>
+            </div>
+            <div className="do-content">
+              <img src={activeRoute.image} alt={activeRoute.title} className="do-hero-img" referrerPolicy="no-referrer" />
+              <div className="eyebrow">{activeRoute.eyebrow}</div>
+              <h1 className="do-title">{activeRoute.title}</h1>
+              <div className="do-body" dangerouslySetInnerHTML={{ __html: activeRoute.details || '' }}></div>
 
+              <div style={{ marginTop: '48px' }}>
 
-            <div className="services-split-layout sd-up">
-              {/* Left Menu */}
-              <div className="services-menu">
-                {SERVICE_MODULES.map((module) => (
-<<<<<<< HEAD
-                  <button
-=======
-              <button
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
-                    key={module.id}
-                    className={`service-menu-item ${activeService.id === module.id ? 'active' : ''}`}
-                    onClick={() => setActiveService(module)}
-                  >
-                    {module.title} <span className="arrow">→</span>
-                  </button>
-                ))}
+                <a href="#cta" onClick={() => setActiveRouteId(null)} className="btn-mag btn-xl">Agendar diagnóstico para {activeRoute.title}</a>
+              </div>
+            </div>
+          </div >
+        )
+      }
+
+      {/* ════ PROCESS DETAIL OVERLAY ════ */}
+      {
+        activeProcessDetail && (
+          <div className="detail-overlay">
+            <div className="do-header">
+              <div className="logo"><span className="logo-mark">L</span>Longitudinal</div>
+              <button className="do-close" onClick={() => setActiveProcessDetail(null)}>✕</button>
+            </div>
+            <div className="do-content">
+              <img src={activeProcessDetail.image} alt={activeProcessDetail.title} className="do-hero-img" referrerPolicy="no-referrer" />
+              <div className="eyebrow">{activeProcessDetail.label}</div>
+              <h1 className="do-title">{activeProcessDetail.title}</h1>
+
+              <p className="do-desc" style={{ fontSize: '1.25rem', lineHeight: '1.6', marginBottom: '2rem', color: 'var(--text-mid)' }}>{activeProcessDetail.desc}</p>
+
+              <div className="mt-8">
+                <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1.5rem', color: 'var(--text)' }}>Pasos para realizar este proceso:</h3>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  {activeProcessDetail.steps?.map((step, i) => (
+                    <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+                      <div style={{
+                        background: 'var(--mag)',
+                        color: 'white',
+                        borderRadius: '50%',
+                        width: '2rem',
+                        height: '2rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0
+                      }}>
+                        <span>{i + 1}</span>
+                      </div>
+                      <span style={{ fontSize: '1.125rem', color: 'var(--text-mid)', paddingTop: '0.25rem' }}>{step}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              {/* Right Display */}
-              <div className="services-display">
-                <div className="sd-image-container">
-<<<<<<< HEAD
+
+              <div style={{ marginTop: '48px' }}>
+
+                <a href="#cta" onClick={() => setActiveProcessDetail(null)} className="btn-mag btn-xl">Agendar {activeProcessDetail.title}</a>
+              </div>
+            </div>
+          </div >
+        )
+      }
+
+      {/* ════ SERVICES ════ */}
+      <section id="services">
+        <div className="services-head">
+          <div>
+            <div className="eyebrow sd-left">Casos de Uso</div>
+            <h2 className="section-title sd-left">Un ecosistema conectado<br />para toda tu empresa</h2>
+          </div>
+          <div className="section-desc sd-right">Deja atrás los silos de información. Longitudinal centraliza los procesos de cada departamento para que operen como un solo motor sincronizado.</div>
+        </div>
+
+
+
+        <div className="services-split-layout sd-up">
+          {/* Left Menu */}
+          <div className="services-menu">
+            {SERVICE_MODULES.map((module) => (
+              <button
+                key={module.id}
+                className={`service-menu-item ${activeService.id === module.id ? 'active' : ''}`}
+                onClick={() => setActiveService(module)}
+              >
+                {module.title} <span className="arrow">→</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Right Display */}
+          <div className="services-display">
+            <div className="sd-image-container">
               <img
                 key={activeService.image} // Force re-render on image change for animation
                 src={activeService.image}
                 alt={activeService.title}
-=======
-              <img 
-                key={activeService.image} // Force re-render on image change for animation
-                src={activeService.image} 
-                alt={activeService.title} 
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
                 className="sd-image"
                 referrerPolicy="no-referrer"
               />
@@ -1217,8 +1128,8 @@ export default function LandingPage() {
         </div >
       </section >
 
-      {/* ════ TOOLS BAND ════ */ }
-      < div className = "tools-band warm-bg" >
+      {/* ════ TOOLS BAND ════ */}
+      < div className="tools-band warm-bg" >
         <div className="tools-band-title">
           Integraciones plug & play con el software que ya utilizas.
         </div>
@@ -1240,36 +1151,9 @@ export default function LandingPage() {
         <div className="tool-icon-wrapper" title="Monday"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M4 4h16v16H4V4zm2 2v12h3V8l3 3 3-3v10h3V6H6z" /></svg></div>
         <div className="tool-icon-wrapper" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 .1.8 1.8 2.8 1.3.5 0 .7.2.9.3-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3" /></svg></div>
       </div>
-    </>
-=======
-        
-        {/* V2: Professional Brand Icons */}
-        <>
-          <div className="motion-row" id="row1" data-speed="-0.22">
-              <div className="tool-icon-wrapper" title="Zapier"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M4.19 19.99l.01-11.96 7.84-4.02 7.85 4.02v11.96l-7.85 4.02-7.85-4.02zm2.01-1.74l5.84 2.99 5.84-2.99v-8.48l-5.84-2.99-5.84 2.99v8.48z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Make"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 21.6c-5.3 0-9.6-4.3-9.6-9.6S6.7 2.4 12 2.4s9.6 4.3 9.6 9.6-4.3 9.6-9.6 9.6z"/></svg></div>
-              <div className="tool-icon-wrapper" title="HubSpot"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Slack"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M6 15a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2h2v2zm1-2a2 2 0 0 1 2-2 2 2 0 0 1-2-2 2 2 0 0 1-2 2v2h2zm2 1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-2h2zm2-1a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-2v-2z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Salesforce"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M16.2 10.8c-.2-1.8-1.7-3.2-3.6-3.2-.5 0-1 .1-1.4.3-.6-1.4-2-2.3-3.6-2.3-1.8 0-3.3 1.2-3.8 2.9-.2 0-.4-.1-.6-.1-2.2 0-4 1.8-4 4 0 2.2 1.8 4 4 4h13c1.7 0 3-1.3 3-3 0-1.5-1.1-2.8-2.6-3z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Google"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Notion"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M4.5 4.5v15h15v-15h-15zm3 3h2.5l3.5 6.5 3.5-6.5h2.5v9h-2v-6l-4 7-4-7v6h-2v-9z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Airtable"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 2L2 7l10 5 10-5-10-5zm0 11l-10 5 10 5 10-5-10-5z"/></svg></div>
-            </div>
-            <div className="motion-row" id="row2" data-speed="0.19" style={{ marginTop: '30px' }}>
-              <div className="tool-icon-wrapper" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Microsoft"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/></svg></div>
-              <div className="tool-icon-wrapper" title="OpenAI"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M22.28 9.28a6.38 6.38 0 0 0-.23-3.6 6.38 6.38 0 0 0-3.37-3.37 6.38 6.38 0 0 0-3.6-.23 6.38 6.38 0 0 0-3.37 1.83 6.38 6.38 0 0 0-1.83 3.37 6.38 6.38 0 0 0 .23 3.6 6.38 6.38 0 0 0 3.37 3.37 6.38 6.38 0 0 0 3.6.23 6.38 6.38 0 0 0 3.37-1.83 6.38 6.38 0 0 0 1.83-3.37zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Pipedrive"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
-              <div className="tool-icon-wrapper" title="ActiveCampaign"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V8h2v4zm2 4h-1v-2h1v2zm0-4h-1V8h1v4z"/></svg></div>
-              <div className="tool-icon-wrapper" title="Monday"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M4 4h16v16H4V4zm2 2v12h3V8l3 3 3-3v10h3V6H6z"/></svg></div>
-              <div className="tool-icon-wrapper" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" className="brand-icon"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 .1.8 1.8 2.8 1.3.5 0 .7.2.9.3-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg></div>
-            </div>
-          </>
->>>>>>> 258c50937279f56207af23a0f2e31907426db0ba
-      </div >
 
-      {/* ════ ABOUT (Mega Card) ════ */ }
-      < section id = "about" >
+      {/* ════ ABOUT (Mega Card) ════ */}
+      <section id="about">
         <div className="mega-card sd-up">
           <div className="mc-grid">
             <div className="mc-content">
@@ -1310,10 +1194,10 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
-      {/* ════ PROCESS (dark) ════ */ }
-      < section id = "how" >
+      {/* ════ PROCESS (dark) ════ */}
+      < section id="how" >
         <div className="eyebrow on-dark sd-up">En marcha en minutos</div>
         <h2 className="section-title on-dark sd-up">En marcha en minutos, no en meses.</h2>
         <p className="section-desc on-dark sd-up">Configura tu motor de automatización en 4 pasos sencillos.</p>
@@ -1333,31 +1217,31 @@ export default function LandingPage() {
         </div>
 
         <div className="process-display sd-up">
-    <div
-      className="process-card"
-      style={{ backgroundImage: `url(${activeProcess.image})` }}
-    >
-      <div className="pc-overlay">
-        <div className="pc-content">
-          <div className="pc-icon-wrap">
-            <activeProcess.icon size={48} strokeWidth={1.5} />
+          <div
+            className="process-card"
+            style={{ backgroundImage: `url(${activeProcess.image})` }}
+          >
+            <div className="pc-overlay">
+              <div className="pc-content">
+                <div className="pc-icon-wrap">
+                  <activeProcess.icon size={48} strokeWidth={1.5} />
+                </div>
+                <h3 className="pc-title">{activeProcess.title}</h3>
+                <p className="pc-desc">{activeProcess.desc}</p>
+                <button
+                  className="btn-lime mt-6 flex items-center gap-2"
+                  onClick={() => setActiveProcessDetail(activeProcess)}
+                >
+                  Aplica Ahora <ArrowRight size={18} />
+                </button>
+              </div>
+            </div>
           </div>
-          <h3 className="pc-title">{activeProcess.title}</h3>
-          <p className="pc-desc">{activeProcess.desc}</p>
-    <button
-      className="btn-lime mt-6 flex items-center gap-2"
-      onClick={() => setActiveProcessDetail(activeProcess)}
-    >
-      Aplica Ahora <ArrowRight size={18} />
-    </button>
-              </div >
-            </div >
-          </div >
-        </div >
-      </section >
+        </div>
+      </section>
 
-      {/* ════ BENEFITS (dark) ════ */ }
-      < section id = "benefits" >
+      {/* ════ BENEFITS (dark) ════ */}
+      < section id="benefits" >
         <div className="benefits-head">
           <div>
             <div className="eyebrow on-dark sd-left">Resultados</div>
@@ -1425,12 +1309,12 @@ export default function LandingPage() {
               <div className="tick-item"><span className="ti"><Link size={20} /></span> Integración de APIs</div>
               <div className="tick-item"><span className="ti"><FileText size={20} /></span> Gestión Documental</div>
             </>
-          </div >
-        </div >
-      </section >
+          </div>
+        </div>
+      </section>
 
-      {/* ════ TESTIMONIALS ════ */ }
-      < section id = "testimonials" >
+      {/* ════ TESTIMONIALS ════ */}
+      < section id="testimonials" >
         <div className="eyebrow sd-up">Casos Reales</div>
         <h2 className="section-title sd-up">Lo que dicen las empresas<br />que usan Longitudinal</h2>
         <div className="testi-grid">
@@ -1438,10 +1322,10 @@ export default function LandingPage() {
           <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">Con Ops Sync, nuestras órdenes de compra se procesan solas. Lo que antes requería 4 personas, ahora es automático. El ROI fue evidente desde el primer mes de suscripción.</p><div className="tc-author"><div className="tc-av av2">CR</div><div><div className="tc-name">Carlos Restrepo</div><div className="tc-co">Director de Operaciones · Industrial · Medellín</div></div></div></div>
           <div className="testi-card"><div className="tc-stars"><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span><span className="tc-star">★</span></div><span className="tc-quote">"</span><p className="tc-text">La plataforma centralizó todo nuestro caos operativo. Briefs, aprobaciones y entregas fluyen sin correos perdidos. Es el sistema operativo que nuestra agencia necesitaba.</p><div className="tc-author"><div className="tc-av av3">AG</div><div><div className="tc-name">Andrea Gómez</div><div className="tc-co">Fundadora · Agencia Digital · Cali</div></div></div></div>
         </div>
-      </section >
+      </section>
 
-      {/* ════ PRICING ════ */ }
-      < section id = "pricing" className = "pricing-section" >
+      {/* ════ PRICING ════ */}
+      < section id="pricing" className="pricing-section" >
         <div className="eyebrow sd-up">Inversión</div>
         <h2 className="section-title sd-up">Planes diseñados para<br />tu etapa de crecimiento</h2>
         <p className="section-desc sd-up">Elige el plan que mejor se adapte a tus necesidades actuales. Escala cuando estés listo.</p>
@@ -1473,14 +1357,13 @@ export default function LandingPage() {
               <a href="#cta" className={`btn-pricing ${plan.highlight ? 'btn-lime' : 'btn-outline'}`}>
                 Comenzar ahora
               </a>
-            </div >
-          ))
-  }
-        </div >
-      </section >
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* ════ CTA ════ */ }
-      < section id = "cta" >
+      {/* ════ CTA ════ */}
+      < section id="cta" >
         <div className="cta-geo"></div>
         <div className="cta-orb"></div>
         <div className="cta-tag">¿Listo para transformar tu empresa?</div>
@@ -1489,21 +1372,21 @@ export default function LandingPage() {
         <div className="cta-actions sd-up">
           <a href="https://calendly.com" target="_blank" className="btn-mag btn-xl">📅 Reservar sesión gratuita</a>
           <a href="https://wa.me/573188713986" target="_blank" className="btn-outline btn-xl">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style={{ marginRight: '8px' }}><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-  WhatsApp
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style={{ marginRight: '8px' }}><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
+            WhatsApp
           </a >
         </div >
-    <div className="trust-row sd-up">
-      <div className="tr-item"><span className="chk">✓</span> Sin costo ni compromiso</div>
-      <div className="tr-item"><span className="chk">✓</span> Respuesta en menos de 24h</div>
-      <div className="tr-item"><span className="chk">✓</span> Diagnóstico personalizado</div>
-      <div className="tr-item"><span className="chk">✓</span> Cualquier área de tu empresa</div>
-      <div className="tr-item"><span className="chk">✓</span> Especialistas en PyMEs Colombia</div>
-    </div>
-      </section >
+        <div className="trust-row sd-up">
+          <div className="tr-item"><span className="chk">✓</span> Sin costo ni compromiso</div>
+          <div className="tr-item"><span className="chk">✓</span> Respuesta en menos de 24h</div>
+          <div className="tr-item"><span className="chk">✓</span> Diagnóstico personalizado</div>
+          <div className="tr-item"><span className="chk">✓</span> Cualquier área de tu empresa</div>
+          <div className="tr-item"><span className="chk">✓</span> Especialistas en PyMEs Colombia</div>
+        </div>
+      </section>
 
-      {/* ════ FAQ ════ */ }
-      < section id = "faq" className = "faq-section" >
+      {/* ════ FAQ ════ */}
+      < section id="faq" className="faq-section" >
         <div className="faq-grid">
           <div className="faq-head">
             <h2>Preguntas frecuentes.</h2>
@@ -1531,9 +1414,9 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
-      {/* ════ FOOTER ════ */ }
+      {/* ════ FOOTER ════ */}
       < footer >
         <div className="footer-inner">
           <div>
@@ -1566,11 +1449,11 @@ export default function LandingPage() {
           <span>© 2025 Longitudinal · Todos los derechos reservados</span>
           <span>Infraestructura Enterprise</span>
         </div>
-      </footer >
+      </footer>
 
       <a href="https://wa.me/573188713986" target="_blank" className="fab">
         <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-      </a >
+      </a>
     </>
   );
-  }
+}
